@@ -108,11 +108,11 @@
     </dependencies>
   </autotools>
 
-  <autotools id="virtinst">
+  <distutils id="virtinst">
     <branch repo="git.fedorahosted.org" module="python-virtinst.git"/>
     <dependencies>
     </dependencies>
-  </autotools>
+  </distutils>
 
   <autotools id="virt-viewer">
     <branch repo="git.fedorahosted.org" module="virt-viewer.git"/>

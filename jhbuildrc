@@ -1,0 +1,21 @@
+# how to use this file?
+#
+# mkdir -p $HOME/spice
+# git clone git://anongit.freedesktop.org/git/xorg/util/modular/ $HOME/xorg/util/modular
+# git clone git://people.freedesktop.org/~teuf/spice-jhbuild ~/spice/spice-jhbuild
+# jhbuild -f $HOME/spice/spice-jhbuild/jhbuildrc
+#
+# Source tree will be in $HOME/spice/
+# Binaries will be in $HOME/spice-usr
+#
+
+moduleset = os.path.join(os.environ['HOME'], 'spice', 'spice-jhbuild', 'modulesets', 'spice.xml')
+
+modules = [ 'spice-gtk', 'qemu' ]
+
+# All modules will be in $HOME/xorg/ after the checkout
+checkoutroot = os.path.join(os.environ['HOME'], 'spice')
+prefix = os.path.join(os.environ['HOME'], 'spice-usr')
+os.environ['ACLOCAL'] = 'aclocal -I ' + os.path.join(prefix, 'share', 'aclocal')
+os.environ['PKG_CONFIG_PATH'] = os.path.join(prefix, 'lib', 'pkgconfig') \
+    + ':' + os.path.join(prefix, 'share', 'pkgconfig')

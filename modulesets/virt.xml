@@ -1,0 +1,36 @@
+<?xml version="1.0" standalone="no"?><!--*- mode: nxml -*-->
+<!DOCTYPE moduleset SYSTEM "moduleset.dtd">
+<?xml-stylesheet type="text/xsl" href="moduleset.xsl"?>
+<moduleset>
+
+  <repository type="git" name="libvirt.org"
+      href="git://libvirt.org/"/>
+
+  <repository type="git" name="git.fedorahosted.org"
+      href="git://git.fedorahosted.org/git/"/>
+
+  <autotools id="libvirt">
+    <branch repo="libvirt.org" module="libvirt.git"/>
+    <dependencies>
+    </dependencies>
+  </autotools>
+
+  <autotools id="virt-manager">
+    <branch repo="git.fedorahosted.org" module="virt-manager.git"/>
+    <dependencies>
+    </dependencies>
+  </autotools>
+
+  <autotools id="virtinst">
+    <branch repo="git.fedorahosted.org" module="python-virtinst.git"/>
+    <dependencies>
+    </dependencies>
+  </autotools>
+
+  <autotools id="virt-viewer">
+    <branch repo="git.fedorahosted.org" module="virt-viewer.git"/>
+    <dependencies>
+    </dependencies>
+  </autotools>
+
+</moduleset>

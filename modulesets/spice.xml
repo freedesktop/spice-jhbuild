@@ -101,7 +101,7 @@
     </dependencies>
   </autotools>
 
-  <autotools id="virt-manager">
+  <autotools id="virt-manager" autogen-sh="autoreconf">
     <branch repo="git.fedorahosted.org" module="virt-manager.git"/>
     <dependencies>
       <dep package="libvirt"/>

@@ -40,6 +40,14 @@
     </dependencies>
   </autotools>
 
+  <!-- qemu isn't a real autotools user, but it provides a configure script
+       which is really similar to the one in autotools build systems.
+       However clean git checkouts already contain a Makefile, so we can't
+       rely on this file to know whether autogen.sh needs to be run or not,
+       so we use config.log instead (which isn't present in a clean git
+       checkout). The configure script requires an "=" when using 'prefix',
+       and doesn't accept libdir nor other unknow arguments so we force
+       a specific template to be used -->
   <autotools id="qemu" makefile="config.log" autogen-template="%(srcdir)s/configure --prefix=%(prefix)s --enable-spice --target-list=x86_64-softmmu --enable-smartcard-nss --enable-smartcard" >
     <branch revision="spice.v32.kvm.ccid.v23" repo="spice" module="qemu"/>
     <dependencies>
@@ -101,6 +109,10 @@
     </dependencies>
   </autotools>
 
+  <!-- virt-manager comes with an autogen.sh script which tries to be
+       too clever, it forces an out of tree build. jhbuild doesn't know
+       how to handle this, so we directly use autoreconf/configure to
+       workaround this (mis)behaviour of autogen.sh -->
   <autotools id="virt-manager" autogen-sh="autoreconf">
     <branch repo="git.fedorahosted.org" module="virt-manager.git"/>
     <dependencies>

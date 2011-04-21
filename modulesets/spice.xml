@@ -35,7 +35,7 @@
     </dependencies>
   </autotools>
 
-  <autotools id="qemu" autogen-template="%(srcdir)s/configure --prefix=%(prefix)s --enable-spice --target-list=x86_64-softmmu --enable-smartcard-nss --enable-smartcard" >
+  <autotools id="qemu" skip-autogen="never" autogen-template="%(srcdir)s/configure --prefix=%(prefix)s --enable-spice --target-list=x86_64-softmmu --enable-smartcard-nss --enable-smartcard" >
     <branch revision="spice.v32.kvm.ccid.v23" repo="spice" module="qemu"/>
     <dependencies>
       <dep package="libcacard"/>

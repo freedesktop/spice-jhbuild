@@ -105,12 +105,14 @@
     <branch repo="git.fedorahosted.org" module="virt-manager.git"/>
     <dependencies>
       <dep package="libvirt"/>
+      <dep package="virtinst"/>
     </dependencies>
   </autotools>
 
   <distutils id="virtinst">
     <branch repo="git.fedorahosted.org" module="python-virtinst.git"/>
     <dependencies>
+      <dep package="virt-viewer"/>
     </dependencies>
   </distutils>
 

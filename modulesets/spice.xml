@@ -2,7 +2,6 @@
 <!DOCTYPE moduleset SYSTEM "moduleset.dtd">
 <?xml-stylesheet type="text/xsl" href="moduleset.xsl"?>
 <moduleset>
-
   <repository type="git" name="git.freedesktop.org"
       href="git://anongit.freedesktop.org/"/>
 
@@ -11,6 +10,12 @@
 
   <repository type="git" name="git.gitorious.org"
       href="git://gitorious.org/"/>
+
+  <repository type="git" name="libvirt.org"
+      href="git://libvirt.org/"/>
+
+  <repository type="git" name="git.fedorahosted.org"
+      href="git://git.fedorahosted.org/git/"/>
 
   <tarball id="celt" version="0.5.1.3">
     <source href="http://downloads.us.xiph.org/releases/celt/celt-0.5.1.3.tar.gz"
@@ -87,6 +92,32 @@
   <autotools id="win32-qxl">
     <branch repo="spice" module="win32/qxl"/>
     <dependencies>
+    </dependencies>
+  </autotools>
+
+  <autotools id="libvirt">
+    <branch repo="libvirt.org" module="libvirt.git"/>
+    <dependencies>
+    </dependencies>
+  </autotools>
+
+  <autotools id="virt-manager">
+    <branch repo="git.fedorahosted.org" module="virt-manager.git"/>
+    <dependencies>
+      <dep package="libvirt"/>
+    </dependencies>
+  </autotools>
+
+  <autotools id="virtinst">
+    <branch repo="git.fedorahosted.org" module="python-virtinst.git"/>
+    <dependencies>
+    </dependencies>
+  </autotools>
+
+  <autotools id="virt-viewer">
+    <branch repo="git.fedorahosted.org" module="virt-viewer.git"/>
+    <dependencies>
+      <dep package="spice-gtk"/>
     </dependencies>
   </autotools>
 

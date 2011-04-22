@@ -21,6 +21,7 @@ jhbuild -f ~/spice/spice-jhbuild/jhbuildrc run qemu-system-x86_64 -vga qxl -spic
 -m 512 -nographic -usbdevice tablet -cdrom ~/isos/livecd.iso
 and
 jhbuild -f ~/spice/spice-jhbuild/jhbuildrc run spicy
+(spice is running on localhost:5924 with the command line above)
 
 If you run
 jhbuild -f ~/spice/spice-jhbuild/jhbuildrc virt-manager

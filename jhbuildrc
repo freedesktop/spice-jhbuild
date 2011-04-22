@@ -13,9 +13,18 @@ moduleset = os.path.join(os.environ['HOME'], 'spice', 'spice-jhbuild', 'modulese
 
 modules = [ 'spice-gtk', 'qemu' ]
 
-# All modules will be in $HOME/xorg/ after the checkout
+# All module sources will be in $HOME/spice/ after the checkout
 checkoutroot = os.path.join(os.environ['HOME'], 'spice')
+# All module binaries will be in $HOME/spice-usr/ after the checkout
 prefix = os.path.join(os.environ['HOME'], 'spice-usr')
+
 os.environ['ACLOCAL'] = 'aclocal -I ' + os.path.join(prefix, 'share', 'aclocal')
 os.environ['PKG_CONFIG_PATH'] = os.path.join(prefix, 'lib', 'pkgconfig') \
     + ':' + os.path.join(prefix, 'share', 'pkgconfig')
+
+# custom CFLAGS / environment pieces for the build
+# os.environ['CFLAGS'] = '-Wall -g -O0'
+
+# Additional flags for make can be specified here
+# Set makeargs to 'V=1' for verbose build output.
+# makeflags = '-j8'

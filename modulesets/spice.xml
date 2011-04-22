@@ -91,6 +91,14 @@
     </dependencies>
   </autotools>
 
+  <autotools id="xspice">
+    <branch repo="git.freedesktop.org" module="~alon/xspice"/>
+    <dependencies>
+      <dep package="spice-protocol"/>
+      <dep package="spice-server"/>
+    </dependencies>
+  </autotools>
+
   <autotools id="win32-vd-agent">
     <branch repo="spice" module="win32/vd_agent"/>
     <dependencies>

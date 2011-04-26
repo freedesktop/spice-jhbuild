@@ -27,4 +27,4 @@ os.environ['PKG_CONFIG_PATH'] = os.path.join(prefix, 'lib', 'pkgconfig') \
 
 # Additional flags for make can be specified here
 # Set makeargs to 'V=1' for verbose build output.
-# makeflags = '-j8'
+# makeargs = '-j8'

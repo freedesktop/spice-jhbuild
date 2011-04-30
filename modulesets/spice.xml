@@ -121,7 +121,7 @@
        too clever, it forces an out of tree build. jhbuild doesn't know
        how to handle this, so we directly use autoreconf/configure to
        workaround this (mis)behaviour of autogen.sh -->
-  <autotools id="virt-manager" autogen-sh="autoreconf">
+  <autotools id="virt-manager" autogen-sh="autoreconf" autogenargs=" --with-default-graphics=spice">
     <branch repo="git.fedorahosted.org" module="virt-manager.git"/>
     <dependencies>
       <dep package="libvirt"/>

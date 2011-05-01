@@ -8,6 +8,9 @@
   <repository type="git" name="spice"
       href="git://anongit.freedesktop.org/git/spice"/>
 
+  <repository type="git" name="qemu"
+      href="git://git.qemu.org"/>
+
   <repository type="git" name="git.gitorious.org"
       href="git://gitorious.org/"/>
 
@@ -54,7 +57,7 @@
        and doesn't accept libdir nor other unknow arguments so we force
        a specific template to be used -->
   <autotools id="qemu" makefile="config.log" autogen-template="%(srcdir)s/configure --prefix=%(prefix)s --enable-spice --target-list=x86_64-softmmu --enable-smartcard-nss --enable-smartcard" >
-    <branch revision="spice.v32.kvm.ccid.v23" repo="spice" module="qemu"/>
+    <branch repo="qemu" module="qemu"/>
     <dependencies>
       <dep package="libcacard"/>
       <dep package="spice-server"/>

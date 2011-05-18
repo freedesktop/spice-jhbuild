@@ -101,6 +101,7 @@
       <dep package="pyparsing"/>
       <dep package="spice-protocol"/>
       <!-- dep package="usbredir"-->
+      <dep package="gtk+-3.0"/>
     </dependencies>
   </autotools>
 

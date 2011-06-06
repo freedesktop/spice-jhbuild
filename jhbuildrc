@@ -18,6 +18,11 @@ checkoutroot = os.path.join(os.environ['HOME'], 'spice')
 # All module binaries will be in $HOME/spice-usr/ after the checkout
 prefix = os.path.join(os.environ['HOME'], 'spice-usr')
 
+# Look in /usr/share for icons, D-BUS service files, etc
+addpath('XDG_DATA_DIRS', '/usr/share')
+# Look in /etc/xdg for system-global autostart files
+addpath('XDG_CONFIG_DIRS', '/etc/xdg')
+
 os.environ['ACLOCAL'] = 'aclocal -I ' + os.path.join(prefix, 'share', 'aclocal')
 os.environ['PKG_CONFIG_PATH'] = os.path.join(prefix, 'lib', 'pkgconfig') \
     + ':' + os.path.join(prefix, 'share', 'pkgconfig')

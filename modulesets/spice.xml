@@ -92,7 +92,7 @@
         version="1.5.5" size="1412611"/>
   </distutils>
 
-  <autotools id="spice-gtk" autogenargs="--disable-usbredir">
+  <autotools id="spice-gtk" autogenargs="--disable-usbredir --without-python">
     <branch repo="spice" module="spice-gtk.git"/>
     <dependencies>
       <dep package="celt"/>

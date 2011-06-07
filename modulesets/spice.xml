@@ -92,7 +92,7 @@
         version="1.5.5" size="1412611"/>
   </distutils>
 
-  <autotools id="spice-gtk" autogenargs="--disable-usbredir --without-python">
+  <autotools id="spice-gtk" autogenargs="--disable-usbredir --without-python --with-audio=gstreamer">
     <branch repo="spice" module="spice-gtk.git"/>
     <dependencies>
       <dep package="celt"/>
@@ -101,6 +101,7 @@
       <dep package="pyparsing"/>
       <dep package="spice-protocol"/>
       <!-- dep package="usbredir"-->
+      <dep package="gst-plugins-good"/>
       <dep package="gtk+-3.0"/>
     </dependencies>
   </autotools>

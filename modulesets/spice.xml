@@ -11,9 +11,6 @@
   <repository type="git" name="qemu"
       href="git://git.qemu.org"/>
 
-  <repository type="git" name="git.gitorious.org"
-      href="git://gitorious.org/"/>
-
   <repository type="git" name="libvirt.org"
       href="git://libvirt.org/"/>
 
@@ -87,7 +84,7 @@
   </distutils>
 
   <autotools id="spice-gtk">
-    <branch repo="git.gitorious.org" module="spice-gtk/spice-gtk.git"/>
+    <branch repo="spice" module="spice-gtk.git"/>
     <dependencies>
       <dep package="spice-protocol"/>
       <dep package="celt"/>

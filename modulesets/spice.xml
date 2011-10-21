@@ -142,6 +142,21 @@
     </dependencies>
   </autotools>
 
+  <autotools id="libvirt-glib" autogenargs="--enable-vala">
+    <branch repo="libvirt.org" module="libvirt-glib.git"/>
+    <dependencies>
+      <dep package="libvirt"/>
+    </dependencies>
+  </autotools>
+
+  <autotools id="boxes">
+    <branch repo="git.gnome.org" module="gnome-boxes"/>
+    <dependencies>
+      <dep package="libvirt-glib"/>
+      <dep package="spice-gtk"/>
+    </dependencies>
+  </autotools>
+
   <autotools id="virt-manager" makeinstallargs="-C build install" makeargs="-C build" autogenargs=" --with-default-graphics=spice">
     <branch repo="git.fedorahosted.org" module="virt-manager.git"/>
     <dependencies>

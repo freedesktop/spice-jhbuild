@@ -86,6 +86,7 @@
     <dependencies>
       <dep package="spice-protocol"/>
       <dep package="celt"/>
+      <dep package="libcacard"/>
       <dep package="pyparsing"/>
     </dependencies>
   </autotools>

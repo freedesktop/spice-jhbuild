@@ -70,6 +70,15 @@
     </dependencies>
   </autotools>
 
+  <autotools id="usbredir" makeinstallargs="LIBDIR=%(libdir) PREFIX=%(prefix) install">
+    <branch repo="git.freedesktop.org" module="~jwrdegoede/usbredir"/>
+    <dep package="libusb"/>
+  </autotools>
+
+  <autotools id="libusb">
+    <branch repo="git.freedesktop.org" module="~jwrdegoede/libusb"/>
+  </autotools>
+
   <autotools id="libcacard" makefile="config.log" autogen-template="%(srcdir)s/configure --prefix=%(prefix)s --target-list=x86_64-softmmu" makeargs="libcacard.la" makeinstallargs="install-libcacard">
     <branch repo="qemu" module="qemu"/>
   </autotools>
@@ -81,13 +90,15 @@
         version="1.5.5" size="1412611"/>
   </distutils>
 
-  <autotools id="spice-gtk">
+  <autotools id="spice-gtk" autogenargs="--disable-usbredir">
     <branch repo="spice" module="spice-gtk.git"/>
     <dependencies>
-      <dep package="spice-protocol"/>
       <dep package="celt"/>
       <dep package="libcacard"/>
+      <dep package="libusb"/>
       <dep package="pyparsing"/>
+      <dep package="spice-protocol"/>
+      <!-- dep package="usbredir"-->
     </dependencies>
   </autotools>
 

@@ -152,6 +152,8 @@
   <autotools id="boxes">
     <branch repo="git.gnome.org" module="gnome-boxes"/>
     <dependencies>
+      <dep package="gtk-vnc"/>
+      <dep package="libosinfo"/>
       <dep package="libvirt-glib"/>
       <dep package="spice-gtk"/>
     </dependencies>
@@ -177,6 +179,14 @@
     <dependencies>
       <dep package="spice-gtk"/>
     </dependencies>
+  </autotools>
+
+  <autotools id="libosinfo">
+    <branch repo="git.fedorahosted.org" module="libosinfo.git"/>
+  </autotools>
+
+  <autotools id="gtk-vnc" autogenargs="--with-gtk=3.0">
+    <branch repo="git.gnome.org" module="gtk-vnc.git"/>
   </autotools>
 
   <autotools id="vinagre" autogenargs="--enable-spice">

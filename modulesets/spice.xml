@@ -10,6 +10,9 @@
   <repository type="git" name="spice.git"
       href="git://anongit.freedesktop.org/git/spice"/>
 
+  <repository type="tarball" name="spice"
+      href="http://spice-space.org/download/"/>
+
   <repository type="git" name="qemu"
       href="git://git.qemu.org"/>
 
@@ -99,7 +102,11 @@
   </distutils>
 
   <autotools id="spice-gtk" autogenargs="--disable-usbredir --without-python --with-audio=gstreamer --with-coroutine=gthread --with-gtk=2.0 --disable-smartcard --disable-vala --disable-controller --disable-werror">
-    <branch repo="spice.git" module="spice-gtk.git"/>
+    <branch module="gtk/spice-gtk-0.12.101.tar.bz2" repo="spice" version="0.12.101"
+	    hash="sha256:73c74843674425d4a1e35777fc3cfe629f47a71596bdf1e3f2c28a9677d3da00"
+           md5sum="4bc1243654ca0f1561b8023f5c5c3a74" size="1163312">
+      <patch file="http://people.freedesktop.org/~teuf/spice-gtk-osx/spice-gtk-build-generate-sym-file.patch" strip="1"/>
+    </branch>
     <dependencies>
       <dep package="celt"/>
       <dep package="pyparsing"/>

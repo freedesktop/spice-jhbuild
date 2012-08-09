@@ -98,14 +98,14 @@
         version="1.5.5" size="1412611"/>
   </distutils>
 
-  <autotools id="spice-gtk" autogenargs="--disable-usbredir --without-python --with-audio=gstreamer --with-coroutine=gthread --disable-smartcard --disable-vala --disable-controller --disable-werror">
+  <autotools id="spice-gtk" autogenargs="--disable-usbredir --without-python --with-audio=gstreamer --with-coroutine=gthread --with-gtk=2.0 --disable-smartcard --disable-vala --disable-controller --disable-werror">
     <branch repo="spice" module="spice-gtk.git"/>
     <dependencies>
       <dep package="celt"/>
       <dep package="pyparsing"/>
       <dep package="spice-protocol"/>
       <dep package="gst-plugins-good"/>
-      <dep package="gtk+-3.0"/>
+      <dep package="gtk+"/>
     </dependencies>
   </autotools>
 
@@ -192,7 +192,7 @@
     <branch repo="git.fedorahosted.org" module="libosinfo.git"/>
   </autotools>
 
-  <autotools id="gtk-vnc" autogenargs="--with-gtk=3.0">
+  <autotools id="gtk-vnc" autogenargs="--with-gtk=2.0">
     <branch repo="git.gnome.org" module="gtk-vnc.git"/>
   </autotools>
 

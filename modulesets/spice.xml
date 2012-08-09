@@ -7,7 +7,7 @@
   <repository type="git" name="git.freedesktop.org"
       href="git://anongit.freedesktop.org/"/>
 
-  <repository type="git" name="spice"
+  <repository type="git" name="spice.git"
       href="git://anongit.freedesktop.org/git/spice"/>
 
   <repository type="git" name="qemu"
@@ -40,7 +40,7 @@
   </autotools>
 
   <autotools id="spice-server" autogenargs="--enable-werror --enable-smartcard --with-sasl --disable-client" >
-    <branch repo="spice" module="spice"/>
+    <branch repo="spice.git" module="spice"/>
     <dependencies>
       <dep package="spice-protocol"/>
       <dep package="celt"/>
@@ -50,7 +50,7 @@
   </autotools>
 
   <autotools id="spice-protocol">
-    <branch repo="spice" module="spice-protocol"/>
+    <branch repo="spice.git" module="spice-protocol"/>
     <dependencies>
     </dependencies>
   </autotools>
@@ -73,7 +73,7 @@
   </autotools>
 
   <autotools id="slirp">
-    <branch repo="spice" module="slirp"/>
+    <branch repo="spice.git" module="slirp"/>
     <dependencies>
     </dependencies>
   </autotools>
@@ -99,7 +99,7 @@
   </distutils>
 
   <autotools id="spice-gtk" autogenargs="--disable-usbredir --without-python --with-audio=gstreamer --with-coroutine=gthread --with-gtk=2.0 --disable-smartcard --disable-vala --disable-controller --disable-werror">
-    <branch repo="spice" module="spice-gtk.git"/>
+    <branch repo="spice.git" module="spice-gtk.git"/>
     <dependencies>
       <dep package="celt"/>
       <dep package="pyparsing"/>
@@ -110,14 +110,14 @@
   </autotools>
 
   <autotools id="vd-agent">
-    <branch repo="spice" module="linux/vd_agent"/>
+    <branch repo="spice.git" module="linux/vd_agent"/>
     <dependencies>
       <dep package="spice-protocol"/>
     </dependencies>
   </autotools>
 
   <autotools id="qxl">
-    <branch repo="spice" module="xorg/driver/xf86-video-qxl"/>
+    <branch repo="spice.git" module="xorg/driver/xf86-video-qxl"/>
     <dependencies>
       <dep package="spice-protocol"/>
     </dependencies>
@@ -132,13 +132,13 @@
   </autotools>
 
   <autotools id="win32-vd-agent">
-    <branch repo="spice" module="win32/vd_agent"/>
+    <branch repo="spice.git" module="win32/vd_agent"/>
     <dependencies>
     </dependencies>
   </autotools>
 
   <autotools id="win32-qxl">
-    <branch repo="spice" module="win32/qxl"/>
+    <branch repo="spice.git" module="win32/qxl"/>
     <dependencies>
     </dependencies>
   </autotools>

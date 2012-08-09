@@ -98,7 +98,7 @@
         version="1.5.5" size="1412611"/>
   </distutils>
 
-  <autotools id="spice-gtk" autogenargs="--disable-usbredir --without-python --with-audio=gstreamer --with-coroutine=gthread --disable-smartcard --disable-vala --disable-controller">
+  <autotools id="spice-gtk" autogenargs="--disable-usbredir --without-python --with-audio=gstreamer --with-coroutine=gthread --disable-smartcard --disable-vala --disable-controller --disable-werror">
     <branch repo="spice" module="spice-gtk.git"/>
     <dependencies>
       <dep package="celt"/>

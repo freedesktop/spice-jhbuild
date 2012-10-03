@@ -13,6 +13,9 @@
   <repository type="tarball" name="spice"
       href="http://spice-space.org/download/"/>
 
+  <repository type="tarball" name="virt-tools"
+      href="http://virt-manager.org/download/sources/"/>
+
   <repository type="git" name="qemu"
       href="git://git.qemu.org"/>
 
@@ -190,7 +193,11 @@
   </distutils>
 
   <autotools id="virt-viewer" autogenargs="--with-gtk=2.0">
-    <branch repo="git.fedorahosted.org" module="virt-viewer.git"/>
+    <branch repo="virt-tools"
+            module="virt-viewer/virt-viewer-0.5.4.tar.gz"
+	    version="0.5.4"
+	    hash="sha256:8e8ca29ac9f0ef8dc49e28fa465814e13c67f37a5fab5ceea163f9ada3735f5b"
+	    size="619744" />
     <dependencies>
       <dep package="spice-gtk"/>
     </dependencies>

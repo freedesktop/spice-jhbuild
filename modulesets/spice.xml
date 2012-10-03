@@ -189,7 +189,7 @@
     </dependencies>
   </distutils>
 
-  <autotools id="virt-viewer">
+  <autotools id="virt-viewer" autogenargs="--with-gtk=2.0">
     <branch repo="git.fedorahosted.org" module="virt-viewer.git"/>
     <dependencies>
       <dep package="spice-gtk"/>

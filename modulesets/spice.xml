@@ -56,7 +56,11 @@
   </autotools>
 
   <autotools id="spice-protocol">
-    <branch repo="spice.git" module="spice-protocol"/>
+    <branch repo="spice"
+            module="releases/spice-protocol-0.12.2.tar.gz"
+	    version="0.12.2"
+            hash="sha256:cf40c6872d58fa2e5f4f5175c882b6bb676c5ba70765d898daf405628bb8a859"
+            size="82857" />
     <dependencies>
     </dependencies>
   </autotools>

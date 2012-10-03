@@ -101,11 +101,12 @@
         version="1.5.5" size="1412611"/>
   </distutils>
 
-  <autotools id="spice-gtk" autogenargs="--disable-usbredir --without-python --with-audio=gstreamer --with-coroutine=gthread --with-gtk=2.0 --disable-smartcard --disable-vala --disable-controller --disable-werror">
-    <branch module="gtk/spice-gtk-0.12.101.tar.bz2" repo="spice" version="0.12.101"
-	    hash="sha256:73c74843674425d4a1e35777fc3cfe629f47a71596bdf1e3f2c28a9677d3da00"
-           md5sum="4bc1243654ca0f1561b8023f5c5c3a74" size="1163312">
-      <patch file="http://people.freedesktop.org/~teuf/spice-gtk-osx/spice-gtk-build-generate-sym-file.patch" strip="1"/>
+  <autotools id="spice-gtk" autogenargs="--disable-usbredir --without-python --with-audio=gstreamer --with-gtk=2.0 --disable-smartcard --disable-vala --disable-controller --disable-werror">
+    <branch repo="spice"
+            module="gtk/spice-gtk-0.14.tar.bz2"
+            version="0.14"
+            hash="sha256:a16fa27364541493b886cc943f72c8f96ec251083af0a29d405a2c4f490274f5"
+            size="1204821">
     </branch>
     <dependencies>
       <dep package="celt"/>

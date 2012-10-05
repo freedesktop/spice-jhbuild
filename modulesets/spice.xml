@@ -108,7 +108,7 @@
         version="1.5.5" size="1412611"/>
   </distutils>
 
-  <autotools id="spice-gtk" autogenargs="--disable-usbredir --without-python --with-audio=gstreamer --with-gtk=2.0 --disable-smartcard --disable-vala --disable-controller --disable-werror">
+  <autotools id="spice-gtk" autogenargs="--disable-usbredir --without-python --with-audio=gstreamer --with-gtk=2.0 --disable-smartcard --disable-vala --enable-controller --with-coroutine=gthread --disable-werror">
     <branch repo="spice"
             module="gtk/spice-gtk-0.14.tar.bz2"
             version="0.14"
@@ -124,7 +124,7 @@
     </dependencies>
   </autotools>
 
-  <autotools id="spice-gtk3" autogenargs="--disable-usbredir --without-python --with-audio=gstreamer --with-gtk=3.0 --disable-smartcard --disable-vala --disable-controller --disable-werror">
+  <autotools id="spice-gtk3" autogenargs="--disable-usbredir --without-python --with-audio=gstreamer --with-gtk=3.0 --disable-smartcard --disable-vala --enable-controller --with-coroutine=gthread --disable-werror">
     <branch repo="spice"
             module="gtk/spice-gtk-0.14.tar.bz2"
             version="0.14"

@@ -1,32 +1,55 @@
-This is a jhbuild moduleset to build spice (and optionnally libvirt) with
-smartcard support.
-To use it, you first have to download and install jhbuild from
-http://git.gnome.org/browse/jhbuild/
-It should be a simple matter of:
-git clone git://git.gnome.org/jhbuild
-cd jhbuild
-./autogen.sh --prefix=....
-make install
+SHORT INSTRUCTIONS
 
-Then you can clone this jhbuild moduleset into ~/spice:
-mkdir -p ~/spice
-git clone git://people.freedesktop.org/~teuf/spice-jhbuild ~/spice/spice-jhbuild
-jhbuild -f ~/spice/spice-jhbuild/jhbuildrc
+- download XCode
+- run sudo xcode-select --switch /Applications/Xcode.app/ContentsDeveloper
+- download and run
+  http://cgit.freedesktop.org/~teuf/spice-jhbuild/plain/spice-osx-build-setup.sh?h=osx
+- copy ~/Source/spice-jhbuild/jhbuildrc to ~/.jhbuildrc-custom
+- add ~/.local/bin to your path
+- run jhbuild bootstrap
+- run jhbuild build
+- you can now run remote-viewer with jhbuild run remote-viewer
 
-and it will build qemu with spice support and smartcard support and
-spice-gtk as the spice client.
 
-The source are downloaded into ~/spice, and the binaries installed to
-~/spice-run. If you want to tweak these paths, you can edit the
-~/spice/spice-jhbuild/jhbuildrc file, it should be self-explanatory.
 
-It can be run with something like:
-jhbuild -f ~/spice/spice-jhbuild/jhbuildrc run qemu-system-x86_64 -vga qxl -spice port=5924,disable-ticketing -enable-kvm
--m 512 -nographic -usbdevice tablet -cdrom ~/isos/livecd.iso
-and
-jhbuild -f ~/spice/spice-jhbuild/jhbuildrc run spicy
-(spice is running on localhost:5924 with the command line above)
+DETAILED INSTRUCTIONS
 
-If you run
-jhbuild -f ~/spice/spice-jhbuild/jhbuildrc virt-manager
-libvirt and virt-manager will be built instead.
+This is a jhbuild moduleset to build remote-viewer on Mac OSX
+Before using it, you need to install XCode. I'm using XCode 4.3.3 for Lion.
+After installing it, I had to run the command below to setup everything
+as expected:
+sudo xcode-select --switch /Applications/Xcode.app/ContentsDeveloper
+
+If you want to build spice-gtk from git (this moduleset is building it
+from tarballs), you also need Perl::Text::CSV. To install it you can run:
+sudo xcode-select --switch /Applications/Xcode.app/ContentsDeveloper
+
+Once these prerequisite are addressed, you can download the
+spice-osx-build-setup.sh script from
+http://cgit.freedesktop.org/~teuf/spice-jhbuild/plain/spice-osx-build-setup.sh?h=osx
+and run it:
+sh spice-osx-build-setup.sh
+
+It will download the gtk-osx jhbuild moduleset using the
+gtk-osx-build-setup.sh script from the gtk-osx project (see
+https://live.gnome.org/GTK%2B/OSX/Building). This in turn installs jhbuild in
+~/Source and creates ~/.local/bin/jhbuild. It will also install ~/.jhbuildrc
+and ~/.jhbuildrc-custom and will copy the current gtk-osx modules into
+~/Source/jhbuild/modulesets. 
+
+After the script runs, ~/Source/spice-jhbuild will contain a jhbuildrc file.
+You can copy it to ~/.jhbuildrc-custom and jhbuild (as setup by the ~/.jhbuildrc
+file created by gtk-osx) will pick it automatically. Alternatively, you can copy
+it to ~/.jhbuildrc-spice and set the JHB environment variable to 'spice' (or
+use any other prefix of your liking). You can edit this jhbuildrc file if you
+want to configure the location where source will be downloaded/expanded, and
+the location where the built binaries/libraries will be installed.
+
+Make sure ~/.local/bin is in your PATH, this is where the jhbuild binary is
+located. You can then run "jhbuild bootstrap" followed by "jhbuild build", and
+this will download and build virt-viewer and all its dependencies. Once this is
+done, "jhbuild run remote-viewer" will start remote-viewer.
+
+If a weird build error happens while building freetype, exit jhbuild, run
+"jhbuild buildone -cfa freetype" and restart "jhbuild build", this should
+get rid of it.

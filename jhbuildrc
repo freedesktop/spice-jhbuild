@@ -11,4 +11,4 @@ prefix = os.path.join(_root, "inst")
 moduleset = 'http://cgit.freedesktop.org/~teuf/spice-jhbuild/plain/modulesets/spice.xml?h=osx'
 modules = [ "meta-gtk-osx-bootstrap", "meta-gtk-osx-core", "virt-viewer" ]
 #for a gtk3 build use these modules
-#modules = [ "meta-gtk-osx-bootstrap", "meta-gtk-osx-gtk3", "virt-viewer-3.0" ]
+#modules = [ "meta-gtk-osx-bootstrap", "meta-gtk-osx-gtk3", "virt-viewer-gtk3" ]

@@ -9,7 +9,7 @@
     <key>CFBundleGetInfoString</key>
     <string>0.5.3, (C) 2007-2012 The virt-viewer team</string>
     <key>CFBundleIconFile</key>
-    <string>Giggle.icns</string>
+    <string>virt-viewer.icns</string>
     <key>CFBundleIdentifier</key>
     <string>org.virt-manager.remote-viewer</string>
     <key>CFBundleInfoDictionaryVersion</key>

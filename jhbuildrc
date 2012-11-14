@@ -16,4 +16,5 @@ skip.append('libiconv')
 #I've seen introspection generation totally hang during gtk+3 builds.
 #We don't need .gir to build virt-viewer, so let's disable introspection
 #altogether
-autogenargs.append('--disable-introspection')
+global autogenargs
+autogenargs = autogenargs + ' --disable-introspection'

@@ -57,10 +57,10 @@
 
   <autotools id="spice-protocol">
     <branch repo="spice"
-            module="releases/spice-protocol-0.12.2.tar.gz"
-	    version="0.12.2"
-            hash="sha256:cf40c6872d58fa2e5f4f5175c882b6bb676c5ba70765d898daf405628bb8a859"
-            size="82857" />
+            module="releases/spice-protocol-0.12.6.tar.bz2"
+            version="0.12.6"
+            hash="sha256:9d4745602eb2ab1d1c1ab98b4babf587574870993b4faefe354ac57bb5e8259b"
+            size="70176" />
     <dependencies>
     </dependencies>
   </autotools>
@@ -110,10 +110,10 @@
 
   <autotools id="spice-gtk" autogenargs="--disable-usbredir --without-python --with-audio=gstreamer --with-gtk=2.0 --disable-smartcard --disable-vala --enable-controller --with-coroutine=gthread --disable-werror">
     <branch repo="spice"
-            module="gtk/spice-gtk-0.18.tar.bz2"
-            version="0.18"
-            hash="sha256:decc954ad3af5894d49b772d7b291620cfea19651fcd2f6c9bf76340428719f3"
-            size="1220594">
+            module="gtk/spice-gtk-0.20.tar.bz2"
+            version="0.20"
+            hash="sha256:b1355823b0ceb2e118c1f9a9a602ccab78e1e2edf2d93f71fa42d3bc85ca75df"
+            size="1210694">
       <!--patch file="http://people.freedesktop.org/~teuf/spice-gtk-osx/0001-Update-spice-glib-sym-file-for-new-symbol.patch" strip="1"/> -->
     </branch>
     <dependencies>
@@ -127,10 +127,10 @@
 
   <autotools id="spice-gtk3" autogenargs="--disable-usbredir --without-python --with-audio=gstreamer --with-gtk=3.0 --disable-smartcard --disable-vala --enable-controller --with-coroutine=gthread --disable-werror">
     <branch repo="spice"
-            module="gtk/spice-gtk-0.18.tar.bz2"
-            version="0.18"
-            hash="sha256:decc954ad3af5894d49b772d7b291620cfea19651fcd2f6c9bf76340428719f3"
-            size="1220594">
+            module="gtk/spice-gtk-0.20.tar.bz2"
+            version="0.20"
+            hash="sha256:b1355823b0ceb2e118c1f9a9a602ccab78e1e2edf2d93f71fa42d3bc85ca75df"
+            size="1210694">
       <!--patch file="http://people.freedesktop.org/~teuf/spice-gtk-osx/0001-Update-spice-glib-sym-file-for-new-symbol.patch" strip="1"/> -->
     </branch>
     <dependencies>
@@ -216,10 +216,10 @@
 
   <autotools id="virt-viewer" autogenargs="--with-gtk=2.0">
     <branch repo="virt-tools"
-            module="virt-viewer/virt-viewer-0.5.5.tar.gz"
-            version="0.5.5"
-            hash="sha256:ce51e46813b312e360b57514da517e74b3d29f45b2f36e772a62e397df17eb70"
-            size="654055" />
+            module="virt-viewer/virt-viewer-0.5.7.tar.gz"
+            version="0.5.7"
+            hash="sha256:4af5e660b3d15bcd3727851af1ddc2f08805c50ad4fc30714e21b20113fe9a83"
+            size="676213" />
     <dependencies>
       <dep package="spice-gtk"/>
     </dependencies>
@@ -227,10 +227,10 @@
 
   <autotools id="virt-viewer-gtk3" autogenargs="--with-gtk=3.0">
     <branch repo="virt-tools"
-            module="virt-viewer/virt-viewer-0.5.5.tar.gz"
-            version="0.5.5"
-            hash="sha256:ce51e46813b312e360b57514da517e74b3d29f45b2f36e772a62e397df17eb70"
-            size="654055" />
+            module="virt-viewer/virt-viewer-0.5.7.tar.gz"
+            version="0.5.7"
+            hash="sha256:4af5e660b3d15bcd3727851af1ddc2f08805c50ad4fc30714e21b20113fe9a83"
+            size="676213" />
     <dependencies>
       <dep package="spice-gtk3"/>
     </dependencies>

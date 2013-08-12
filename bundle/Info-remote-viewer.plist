@@ -7,7 +7,7 @@
     <key>CFBundleExecutable</key>
     <string>RemoteViewer</string>
     <key>CFBundleGetInfoString</key>
-    <string>0.5.3, (C) 2007-2012 The virt-viewer team</string>
+    <string>0.5.7, (C) 2007-2013 The virt-viewer team</string>
     <key>CFBundleIconFile</key>
     <string>virt-viewer.icns</string>
     <key>CFBundleIdentifier</key>
@@ -17,13 +17,13 @@
     <key>CFBundlePackageType</key>
     <string>APPL</string>
     <key>CFBundleShortVersionString</key>
-    <string>0.5.3</string>
+    <string>0.5.7</string>
     <key>CFBundleSignature</key>
     <string>????</string>
     <key>CFBundleVersion</key>
-    <string>0.5.3</string>
+    <string>0.5.7</string>
     <key>NSHumanReadableCopyright</key>
-    <string>Copyright 2007 - 2012 The virt-viewer team, GNU General Public License version 2 or later.</string>
+    <string>Copyright 2007 - 2013 The virt-viewer team, GNU General Public License version 2 or later.</string>
     <key>LSMinimumSystemVersion</key>
     <string>10.4</string>
 </dict>

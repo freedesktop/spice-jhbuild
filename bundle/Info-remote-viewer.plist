@@ -26,5 +26,18 @@
     <string>Copyright 2007 - 2013 The virt-viewer team, GNU General Public License version 2 or later.</string>
     <key>LSMinimumSystemVersion</key>
     <string>10.4</string>
+    <key>CFBundleDocumentTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleTypeIconFile</key>
+            <string>virt-viewer.icns</string>
+            <key>CFBundleTypeName</key>
+            <string>virt-viewer connection file</string>
+            <key>CFBundleTypeRole</key>
+            <string>Viewer</string>
+            <key>CFBundleTypeExtensions</key>
+            <array><string>vv</string></array>
+        </dict>
+    </array>
 </dict>
 </plist>

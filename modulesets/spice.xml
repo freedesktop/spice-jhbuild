@@ -63,8 +63,8 @@
     </dependencies>
   </autotools>
 
-  <autotools id="usbredir" makeinstallargs="LIBDIR=%(libdir) PREFIX=%(prefix) install">
-    <branch repo="git.freedesktop.org" module="~jwrdegoede/usbredir"/>
+  <autotools id="usbredir">
+    <branch repo="spice" module="usbredir"/>
     <dep package="libusb"/>
   </autotools>
 
@@ -90,7 +90,7 @@
       <dep package="libusb"/>
       <dep package="pyparsing"/>
       <dep package="spice-protocol"/>
-      <!-- dep package="usbredir"-->
+      <dep package="usbredir"/>
     </dependencies>
   </autotools>
 

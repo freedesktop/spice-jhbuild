@@ -25,7 +25,12 @@
   <repository type="git" name="git.gnome.org"
       href="git://git.gnome.org/"/>
 
-  <autotools id="spice-server" autogenargs="--enable-werror --enable-smartcard --with-sasl --disable-client" >
+  <autotools id="spice-server"
+             autogenargs=
+"--enable-werror
+--enable-smartcard
+--enable-lz4
+--with-sasl">
     <branch repo="spice" module="spice"/>
     <dependencies>
       <dep package="spice-protocol"/>
@@ -93,7 +98,13 @@
         version="1.5.5" size="1412611"/>
   </distutils>
 
-  <autotools id="spice-gtk" autogenargs="--disable-usbredir">
+  <autotools id="spice-gtk"
+             autogenargs=
+"--enable-werror
+--enable-webdav
+--enable-smartcard
+--enable-usbredir
+--disable-polkit">
     <branch repo="spice" module="spice-gtk.git"/>
     <dependencies>
       <dep package="libcacard"/>
@@ -150,7 +161,10 @@
     </dependencies>
   </autotools>
 
-  <autotools id="virt-viewer">
+  <autotools id="virt-viewer"
+             autogenargs=
+"--enable-werror
+--with-spice-gtk">
     <branch repo="git.fedorahosted.org" module="virt-viewer.git"/>
     <dependencies>
       <dep package="spice-gtk"/>

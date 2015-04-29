@@ -48,7 +48,21 @@
        checkout). The configure script requires an "=" when using 'prefix',
        and doesn't accept libdir nor other unknow arguments so we force
        a specific template to be used -->
-  <autotools id="qemu" makefile="config.log" autogen-template="%(srcdir)s/configure --prefix=%(prefix)s --enable-spice --target-list=x86_64-softmmu --enable-smartcard-nss --enable-smartcard" >
+  <autotools id="qemu"
+             makefile="config.log"
+             autogen-template=
+"%(srcdir)s/configure
+--prefix=%(prefix)s
+--disable-werror
+--enable-debug
+--disable-strip
+--enable-kvm
+--enable-spice
+--target-list=x86_64-softmmu
+--enable-smartcard-nss
+--enable-libusb
+--enable-usb-redir
+--with-gtkabi=3.0">
     <branch repo="qemu" module="qemu"/>
     <dependencies>
       <dep package="libcacard"/>

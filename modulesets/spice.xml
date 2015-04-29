@@ -2,6 +2,8 @@
 <!DOCTYPE moduleset SYSTEM "moduleset.dtd">
 <?xml-stylesheet type="text/xsl" href="moduleset.xsl"?>
 <moduleset>
+  <include href="https://git.gnome.org/browse/jhbuild/plain/modulesets/gnome-apps-3.18.modules"/>
+
   <repository type="git" name="git.freedesktop.org"
       href="git://anongit.freedesktop.org/"/>
 
@@ -142,23 +144,6 @@
     </dependencies>
   </autotools>
 
-  <autotools id="libvirt-glib" autogenargs="--enable-vala">
-    <branch repo="libvirt.org" module="libvirt-glib.git"/>
-    <dependencies>
-      <dep package="libvirt"/>
-    </dependencies>
-  </autotools>
-
-  <autotools id="boxes">
-    <branch repo="git.gnome.org" module="gnome-boxes"/>
-    <dependencies>
-      <dep package="gtk-vnc"/>
-      <dep package="libosinfo"/>
-      <dep package="libvirt-glib"/>
-      <dep package="spice-gtk"/>
-    </dependencies>
-  </autotools>
-
   <autotools id="virt-manager" makeinstallargs="-C build install" makeargs="-C build" autogenargs=" --with-default-graphics=spice">
     <branch repo="git.fedorahosted.org" module="virt-manager.git"/>
     <dependencies>
@@ -180,20 +165,4 @@
       <dep package="spice-gtk"/>
     </dependencies>
   </autotools>
-
-  <autotools id="libosinfo">
-    <branch repo="git.fedorahosted.org" module="libosinfo.git"/>
-  </autotools>
-
-  <autotools id="gtk-vnc" autogenargs="--with-gtk=3.0">
-    <branch repo="git.gnome.org" module="gtk-vnc.git"/>
-  </autotools>
-
-  <autotools id="vinagre" autogenargs="--enable-spice">
-    <branch repo="git.gnome.org" module="vinagre.git"/>
-    <dependencies>
-      <dep package="spice-gtk"/>
-    </dependencies>
-  </autotools>
-
 </moduleset>

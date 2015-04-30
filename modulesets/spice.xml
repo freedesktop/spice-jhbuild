@@ -71,6 +71,7 @@
     <branch repo="qemu" module="qemu"/>
     <dependencies>
       <dep package="libcacard"/>
+      <dep package="spice-protocol"/>
       <dep package="spice-server"/>
       <dep package="vd-agent"/>
     </dependencies>
@@ -109,6 +110,7 @@
     <dependencies>
       <dep package="libcacard"/>
       <dep package="pyparsing"/>
+      <dep package="phodav"/>
       <dep package="spice-protocol"/>
       <dep package="usbredir"/>
     </dependencies>
@@ -158,6 +160,9 @@
     <branch repo="git.fedorahosted.org" module="virt-manager.git"/>
     <dependencies>
       <dep package="libvirt"/>
+      <dep package="libvirt-glib"/>
+      <dep package="spice-gtk"/>
+      <dep package="gtk-vnc"/>
     </dependencies>
   </autotools>
 
@@ -167,7 +172,11 @@
 --with-spice-gtk">
     <branch repo="git.fedorahosted.org" module="virt-viewer.git"/>
     <dependencies>
+      <dep package="libvirt"/>
+      <dep package="gtk-vnc"/>
       <dep package="spice-gtk"/>
+      <dep package="spice-protocol"/>
+      <dep package="libgovirt"/>
     </dependencies>
   </autotools>
 </moduleset>

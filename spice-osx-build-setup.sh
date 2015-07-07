@@ -26,7 +26,7 @@
 #
 
 SOURCE=$HOME/Source
-BASEURL="http://git.gnome.org/browse/gtk-osx/plain/"
+BASEURL="https://git.gnome.org/browse/gtk-osx/plain/"
 SPICE_JHBUILD_GIT="git://people.freedesktop.org/~teuf/spice-jhbuild"
 
 do_exit()

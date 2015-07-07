@@ -9,10 +9,11 @@ prefix = os.path.join(_root, "inst")
 
 # spice gtk-osx moduleset
 moduleset = 'http://cgit.freedesktop.org/~teuf/spice-jhbuild/plain/modulesets/spice.xml?h=osx'
-modules = [ "meta-gtk-osx-bootstrap", "meta-gtk-osx-core", "virt-viewer" ]
+#for a gtk2 build use these modules
+#modules = [ "meta-gtk-osx-bootstrap", "meta-gtk-osx-core", "virt-viewer" ]
 skip.append('libiconv')
 #for a gtk3 build use these modules
-#modules = [ "meta-gtk-osx-bootstrap", "meta-gtk-osx-gtk3", "virt-viewer-gtk3" ]
+modules = [ "meta-gtk-osx-bootstrap", "meta-gtk-osx-gtk3", "virt-viewer-gtk3" ]
 #I've seen introspection generation totally hang during gtk+3 builds.
 #We don't need .gir to build virt-viewer, so let's disable introspection
 #altogether

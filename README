@@ -3,7 +3,7 @@ SHORT INSTRUCTIONS
 - download XCode
 - run sudo xcode-select --switch /Applications/Xcode.app/ContentsDeveloper
 - download and run
-  http://cgit.freedesktop.org/~teuf/spice-jhbuild/plain/spice-osx-build-setup.sh?h=osx
+  http://cgit.freedesktop.org/spice/spice-jhbuild/plain/spice-osx-build-setup.sh?h=osx
 - copy ~/Source/spice-jhbuild/jhbuildrc to ~/.jhbuildrc-custom
 - add ~/.local/bin to your path
 - run jhbuild bootstrap
@@ -26,7 +26,7 @@ sudo xcode-select --switch /Applications/Xcode.app/ContentsDeveloper
 
 Once these prerequisite are addressed, you can download the
 spice-osx-build-setup.sh script from
-http://cgit.freedesktop.org/~teuf/spice-jhbuild/plain/spice-osx-build-setup.sh?h=osx
+http://cgit.freedesktop.org/spice/spice-jhbuild/plain/spice-osx-build-setup.sh?h=osx
 and run it:
 sh spice-osx-build-setup.sh
 

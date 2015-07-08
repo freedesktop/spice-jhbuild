@@ -8,7 +8,7 @@ checkoutroot = os.path.join(_root, "source")
 prefix = os.path.join(_root, "inst")
 
 # spice gtk-osx moduleset
-moduleset = 'http://cgit.freedesktop.org/~teuf/spice-jhbuild/plain/modulesets/spice.xml?h=osx'
+moduleset = 'http://cgit.freedesktop.org/spice/spice-jhbuild/plain/modulesets/spice.xml?h=osx'
 #for a gtk2 build use these modules
 #modules = [ "meta-gtk-osx-bootstrap", "meta-gtk-osx-core", "virt-viewer" ]
 skip.append('libiconv')

@@ -16,8 +16,11 @@
   <repository type="git" name="libvirt.org"
       href="git://libvirt.org/"/>
 
-  <repository type="git" name="git.fedorahosted.org"
-      href="git://git.fedorahosted.org/git/"/>
+   <repository type="git" name="github.com"
+      href="https://github.com/virt-manager/"/>
+
+   <repository type="git" name="pagure.io"
+      href="https://pagure.io/"/>
 
   <repository type="tarball" name="sourceforge"
       href="http://downloads.sourceforge.net/project/"/>
@@ -157,7 +160,7 @@
   </autotools>
 
   <autotools id="virt-manager" makeinstallargs="-C build install" makeargs="-C build" autogenargs=" --with-default-graphics=spice">
-    <branch repo="git.fedorahosted.org" module="virt-manager.git"/>
+    <branch repo="github.com" module="virt-manager.git"/>
     <dependencies>
       <dep package="libvirt"/>
       <dep package="libvirt-glib"/>
@@ -170,7 +173,7 @@
              autogenargs=
 "--enable-werror
 --with-spice-gtk">
-    <branch repo="git.fedorahosted.org" module="virt-viewer.git"/>
+    <branch repo="pagure.io" module="virt-viewer.git"/>
     <dependencies>
       <dep package="libvirt"/>
       <dep package="gtk-vnc"/>

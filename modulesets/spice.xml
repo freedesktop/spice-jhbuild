@@ -28,25 +28,25 @@
   <repository type="git" name="git.gnome.org"
       href="git://git.gnome.org/"/>
 
-  <autotools id="spice-server"
-             autogenargs=
-"--enable-werror
---enable-smartcard
---enable-lz4
---with-sasl">
+  <meson id="spice-server"
+             mesonargs=
+"-Dwerror=true
+-Dsmartcard=true
+-Dlz4=true
+-Dsasl=true">
     <branch repo="spice" module="spice"/>
     <dependencies>
       <dep package="spice-protocol"/>
       <dep package="libcacard"/>
       <dep package="pyparsing"/>
     </dependencies>
-  </autotools>
+  </meson>
 
-  <autotools id="spice-protocol">
+  <meson id="spice-protocol">
     <branch repo="spice" module="spice-protocol"/>
     <dependencies>
     </dependencies>
-  </autotools>
+  </meson>
 
   <!-- qemu isn't a real autotools user, but it provides a configure script
        which is really similar to the one in autotools build systems.
@@ -102,13 +102,14 @@
         version="2.0.3" size="1462653"/>
   </distutils>
 
-  <autotools id="spice-gtk"
-             autogenargs=
-"--enable-werror
---enable-webdav
---enable-smartcard
---enable-usbredir
---disable-polkit">
+  <meson id="spice-gtk"
+             mesonargs=
+"-Dwerror=true
+-Dwebdav=enabled
+-Dsmartcard=enabled
+-Dusbredir=enabled
+-Dpolkit=disabled
+-Dgtk_doc=disabled">
     <branch repo="spice" module="spice-gtk.git"/>
     <dependencies>
       <dep package="libcacard"/>
@@ -117,7 +118,7 @@
       <dep package="spice-protocol"/>
       <dep package="usbredir"/>
     </dependencies>
-  </autotools>
+  </meson>
 
   <autotools id="vd-agent">
     <branch repo="spice" module="linux/vd_agent"/>

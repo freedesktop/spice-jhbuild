@@ -11,6 +11,8 @@
 
 moduleset = os.path.join(os.environ['HOME'], 'spice', 'spice-jhbuild', 'modulesets', 'spice.xml')
 
+mesonargs = '--buildtype=debugoptimized'
+
 modules = [ 'spice-gtk', 'qemu' ]
 
 # All module sources will be in $HOME/spice/ after the checkout

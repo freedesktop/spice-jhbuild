@@ -26,7 +26,7 @@
 #
 
 SOURCE=$HOME/Source
-BASEURL="https://git.gnome.org/browse/gtk-osx/plain/"
+BASEURL="https://gitlab.gnome.org/GNOME/gtk-osx/raw/master/"
 SPICE_JHBUILD_GIT="git://people.freedesktop.org/spice/spice-jhbuild"
 
 do_exit()
@@ -60,5 +60,5 @@ fi
 
 echo "Setting up gtk-osx build"
 cd ..
-curl -s $BASEURL/gtk-osx-build-setup.sh -o gtk-osx-build-setup.sh || do_exit "Didn't get jhbuildrc"
-sh gtk-osx-build-setup.sh || do_exit "Failed to setup gtk-osx build"
+curl -s $BASEURL/gtk-osx-setup.sh -o gtk-osx-setup.sh || do_exit "Didn't get jhbuildrc"
+sh gtk-osx-setup.sh || do_exit "Failed to setup gtk-osx build"

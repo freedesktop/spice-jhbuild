@@ -1,4 +1,4 @@
-This is a jhbuild moduleset to build spice (and optionnally libvirt) with
+This is a jhbuild moduleset to build spice (and optionally libvirt) with
 smartcard support.
 To use it, you first have to download and install jhbuild from
 http://git.gnome.org/browse/jhbuild/

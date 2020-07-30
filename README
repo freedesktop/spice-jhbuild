@@ -1,9 +1,9 @@
 This is a jhbuild moduleset to build spice (and optionally libvirt) with
 smartcard support.
 To use it, you first have to download and install jhbuild from
-http://git.gnome.org/browse/jhbuild/
+https://gitlab.gnome.org/GNOME/jhbuild
 It should be a simple matter of:
-git clone git://git.gnome.org/jhbuild
+git clone https://gitlab.gnome.org/GNOME/jhbuild.git
 cd jhbuild
 ./autogen.sh --prefix=....
 make install
